@@ -7,10 +7,9 @@ namespace CommanderGQL.Data
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
-
         }
-        public DbSet<Platform> Platforms { get; set; }
-        public DbSet<Command> Commands { get; set; }
+        public DbSet<Platform> Platforms => Set<Platform>();
+        public DbSet<Command> Commands => Set<Command>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
