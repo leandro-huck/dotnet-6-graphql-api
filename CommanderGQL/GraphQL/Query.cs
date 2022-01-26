@@ -9,6 +9,8 @@ namespace CommanderGQL.GraphQL
         [UseDbContext(typeof(AppDbContext))]
         //[UseProjection] // Get Platforms and their Commands
         //[GraphQLDescription("Gets the queryable platform.")]
+        [UseFiltering]
+        [UseSorting]
         public IQueryable<Platform> GetPlatforms([ScopedService] AppDbContext context)
         {
             return context.Platforms;
@@ -17,6 +19,8 @@ namespace CommanderGQL.GraphQL
         [UseDbContext(typeof(AppDbContext))]
         //[UseProjection] // Get Commands and their Platforms
         //[GraphQLDescription("Gets the queryable command.")]
+        [UseFiltering]
+        [UseSorting]
         public IQueryable<Command> GetCommands([ScopedService] AppDbContext context)
         {
             return context.Commands;

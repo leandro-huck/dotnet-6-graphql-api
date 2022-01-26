@@ -23,7 +23,9 @@ builder.Services
     .AddQueryType<Query>()
     .AddType<PlatformType>()
     .AddType<CommandType>()
-    .AddProjections();
+    .AddFiltering()
+    .AddSorting();
+    //.AddProjections();
     
 var app = builder.Build();
 
