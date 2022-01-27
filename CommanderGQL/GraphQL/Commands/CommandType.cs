@@ -1,7 +1,7 @@
 using CommanderGQL.Data;
 using CommanderGQL.Models;
 
-namespace CommanderGQL.Commands
+namespace CommanderGQL.GraphQL.Commands
 {
     public class CommandType : ObjectType<Command>
     {
